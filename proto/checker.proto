@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package currency;
+
+option go_package = "checker.v1;checkerv1";
+
+service Time{
+  rpc GetTime (ServerTime) returns (ReturnTime);
+}
+
+message ServerTime {
+  string request = 1;
+}
+
+message ReturnTime {
+  int64 time = 1;
+}
